@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudarshan - Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppin', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            ;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .FirstSection {
+            display: flex;
+            align-items: center;
+            margin: 50px 0;
+            justify-content: space-around;
+        }
+
+        .FirstSection>div {
+            width: 25%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background: #1a1a50;
+            color: white;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .leftSection .buttons{
+            padding:50px 0;
+        }
+
+        .rightSection img {
+            width: 80%;
+            transition:0.5s;
+        }
+         .rightSection img:hover
+         {
+            transform: scale(1.09);
+            cursor: pointer;
+         }
+
+
+        .purple {
+            color: rgb(145, 82, 205);
+        }
+
+        .textgray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(145, 82, 205);
+        }
+
+        .SecondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 40vh;
+        }
+
+        .SecondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .SecondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            display: flex;
+            margin: 27px 0;
+        }
+
+        .SecondSection .vertical {
+            height: 95px;
+            width: 1px;
+            background-color: white;
+            margin: 0 14vw;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            font-size: 14px;
+            width: 150px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+        }
+        .ThirdSection {
+            /* max-width: 80vw;
+            margin: auto;
+            height: 30vh; */
+            display: grid;
+            place-items: center;
+        }
+
+        .FourthSection {
+            /* max-width: 80vw;
+            margin: auto;
+            height: 30vh; */
+            display: grid;
+            place-items: center;
+        }
+        .FifthSection {
+            /* max-width: 80vw;
+            margin: auto;
+            height: 30vh; */
+            display: grid;
+            place-items: center;
+        }
+        .FifthSection img{
+            height:300px;
+            width:auto;
+        }
+
+        footer {
+            background: color #0e0e1a;
+            height: 25px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .footer>div {
+            width: 223px;
+        }
+
+        footer .footer-right {
+            text-align: center;
+            color: gray;
+            padding: 12px 12px;
+        }
+        @media screen and (max-width: 1200px) {
+            body{
+                overflow-x: hidden;
+            }
+            .box{
+                flex-direction: column ;
+            }
+            .vertical-title, .vertical-desc{
+                left:20px;
+                padding:5px;
+                top:35px;
+            }
+            nav{
+                flex-direction: column;
+            }
+            .SecondSection .box{
+                width:50vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .FirstSection{
+                flex-direction: column-reverse;
+            }
+            .leftSection{
+                width:100% !important;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .rightSection{
+                width:721px !important;
+                display: flex;
+                justify-content: center;
+            }
+            .rightSection img{
+                height:28vw;
+                width:22vw;
+                margin-bottom: 73px;
+            }
+            .SecondSection{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                height:66vh;
+            }
+            .FifthSection img{
+                height:100px;
+                width:auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sudarshan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#activities">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="FirstSection">
+            <div class="leftSection">
+                <div>Hi, My name is <span class="purple">Sudarshan</span></div>
+                <div>and I'm a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="SUDARSHAN REDDY.pdf"><button class="btn">Download Resume</button></a>
+                    <a href="https://github.com/Sudarshan944"><button class="btn">Visit GitHub</button></a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="sudarshan.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="SecondSection" id="education">
+            <span class="textgray">What I have done so far</span>
+            <h1>Education</h1>
+            <div class="box">
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Rajeev Gandhi Memorial College of Engineering and Technology
+                    </div>
+                    <div class="vertical-desc">
+                        Nervada, Nandyal (2020-2024)
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Narayana Junior College
+                    </div>
+                    <div class="vertical-desc">
+                        Narasimhakonda, Nellore (2018-2020)
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Sri Vivekananda High School
+                    </div>
+                    <div class="vertical-desc">
+                        Buchireddypalem, Nellore (2018)
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="ThirdSection" id="skills">
+            <h1>Technical Skills</h1>
+            <br>
+            <h2>Proficient In</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+            </ul><br>
+            <h2>Basic Knowledge</h2>
+            <ul>
+                <li>CPP</li>
+                <li>C</li>
+            </ul>
+            <h2>Coding Platforms</h2>
+            <ul>
+                <li>LeetCode</li>
+                <li>HackerRank</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="FourthSection" id="activities">
+            <h1>Co-Curricular Activities</h1><br>
+            <ul>
+                <li>Won first prize in Technical Quiz competition</li>
+                <li>Won second prize in Web Design competition</li>
+                <li>Participated in Paper Presentation</li>
+            </ul>
+        </section>
+        <hr>
+        <section class="FifthSection" id="Projects">
+            <h1>Projects</h1><br>
+            <div class="container">
+                <div id="p1">
+                    <figure>
+                        <img src="./spot.png" alt="project_image"/>
+                    <figcaption align="center">
+                        My Song Search
+                    </figcaption>
+                    </figure>
+                </div>
+                <hr>
+                <div id="p2">
+                    <figure>
+                        <img src="./customtext.png" alt="project_image" />
+                        <figcaption align="center">
+                            CustomTextet
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Sudarshan's Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="https://github.com/Sudarshan944"><img src="./git.png" alt="git" height="30px" width="30px"></a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/sudarshan-reddy-59b742212/"><img src="./linkedin.png" alt="linkedin" height="30px" width="30px"></a></li>
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li><a href="https://instagram.com/sudarshanreddy.akkalareddy?utm_source=qr&igshid=ZDc4ODBmNjlmNQ%3D%3D"><img src="./insta.png" alt="instagram" height="30px" width="30px"></a></li>
+                </ul>
+            </div>
+            <div class="footer-fifth">
+                <ul>
+                    <li><a href="https://www.hackerrank.com/Sudarshan944"><img src="data:image/png;base64,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" alt="hackerrank" height="30px" width="30px"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right">
+            Copyright &#169; www.sudarshanportfolio.com | All rights reserved.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Student', 'Web Developer', 'Programmer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
